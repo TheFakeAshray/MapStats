@@ -76,6 +76,7 @@ const App = () => {
               case 'CYCLING':
                 acc.cycling += distance;
                 acc.timeSpentCycling += timeSpent;
+                break
 							case 'IN_TRAIN':
 							case 'IN_SUBWAY':
 							case 'IN_TRAM':
