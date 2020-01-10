@@ -74,7 +74,7 @@ const App = () => {
 								acc.timeSpentWalking += timeSpent;
                 break;
               case 'CYCLING':
-                acc.cylcing += distance;
+                acc.cycling += distance;
                 acc.timeSpentCycling += timeSpent;
 							case 'IN_TRAIN':
 							case 'IN_SUBWAY':
@@ -107,7 +107,7 @@ const App = () => {
 				{
 					total: 0,
           walking: 0,
-          cycling: 0
+          cycling: 0,
 					train: 0,
 					bus: 0,
 					car: 0,
