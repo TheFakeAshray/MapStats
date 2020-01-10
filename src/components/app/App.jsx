@@ -72,7 +72,10 @@ const App = () => {
 							case 'WALKING':
 								acc.walking += distance;
 								acc.timeSpentWalking += timeSpent;
-								break;
+                break;
+              case 'CYCLING':
+                acc.cylcing += distance;
+                acc.timeSpentCycling += timeSpent;
 							case 'IN_TRAIN':
 							case 'IN_SUBWAY':
 							case 'IN_TRAM':
@@ -103,14 +106,16 @@ const App = () => {
 				},
 				{
 					total: 0,
-					walking: 0,
+          walking: 0,
+          cycling: 0
 					train: 0,
 					bus: 0,
 					car: 0,
 					flying: 0,
 					other: 0,
 					timeTotal: 0,
-					timeSpentWalking: 0,
+          timeSpentWalking: 0,
+          timeSpentCycling: 0,
 					timeSpentOther: 0,
 					timeSpentTrain: 0,
 					timeSpentBus: 0,
@@ -123,7 +128,8 @@ const App = () => {
 
 	const millisecondsToHours = ms => Math.round((ms / 1000 / 60 / 60) * 100) / 100;
 	const {
-		walking,
+    walking,
+    cycling,
 		train,
 		bus,
 		car,
@@ -131,6 +137,7 @@ const App = () => {
 		other,
 		total,
 		timeSpentWalking,
+		timeSpentCycling,
 		timeSpentOther,
 		timeSpentTrain,
 		timeSpentBus,
@@ -172,6 +179,10 @@ const App = () => {
 									<strong>Distance walked: </strong>
 									{walking / 1000} km
 								</li>
+                <li>
+									<strong>Distance cycled: </strong>
+									{cycling / 1000} km
+								</li>
 								<li>
 									<strong>Distance in train: </strong>
 									{train / 1000} km
@@ -199,6 +210,10 @@ const App = () => {
 								<li>
 									<strong>Time spent walking: </strong>
 									{millisecondsToHours(timeSpentWalking)} hours
+								</li>
+								<li>
+									<strong>Time spent cycling: </strong>
+									{millisecondsToHours(timeSpentCycling)} hours
 								</li>
 								<li>
 									<strong>Time spent in train: </strong>
