@@ -120,7 +120,6 @@ const App = () => {
 			)
 		);
 	};
-	console.log(timelineObjects);
 
 	const millisecondsToHours = ms => Math.round((ms / 1000 / 60 / 60) * 100) / 100;
 	const {
