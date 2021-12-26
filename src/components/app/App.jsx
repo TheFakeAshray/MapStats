@@ -168,6 +168,8 @@ const App = () => {
 					<button onClick={() => setDateRange({ startDate: 2018, endDate: 2018 })}>2018</button>
 					<button onClick={() => setDateRange({ startDate: 2019, endDate: 2019 })}>2019</button>
 					<button onClick={() => setDateRange({ startDate: 2020, endDate: 2020 })}>2020</button>
+					<button onClick={() => setDateRange({ startDate: 2021, endDate: 2021 })}>2021</button>
+					<button onClick={() => setDateRange({ startDate: 2022, endDate: 2022 })}>2022</button>
 				</div>
 				<div className='row justify-content-center'>
 					{startDate && endDate && `Date Range: ${dateRange.startDate} to ${dateRange.endDate}`}
